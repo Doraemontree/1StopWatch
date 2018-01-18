@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="17C205" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6a-Wi-YTp">
+                                <frame key="frameInset" minX="16" minY="49" width="343" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk3-uO-eBJ">
+                                <frame key="frameInset" minX="16" minY="318" width="46" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="StartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFq-5E-GWO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXb-VG-KZe" userLabel="Reset">
+                                <frame key="frameInset" minX="157" minY="222" width="46" height="30"/>
+                                <state key="normal" title="reset"/>
+                                <connections>
+                                    <action selector="ResertBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HW-Vb-GW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNz-J1-CdG">
+                                <frame key="frameInset" minX="287" minY="318" width="46" height="30"/>
+                                <state key="normal" title="pause"/>
+                                <connections>
+                                    <action selector="PauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfU-Ic-0TB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="H6a-Wi-YTp" secondAttribute="trailing" id="9tp-93-TnC"/>
+                            <constraint firstItem="H6a-Wi-YTp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="QCS-LW-gFi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TXb-VG-KZe" secondAttribute="trailing" constant="156" id="V9N-cu-nQo"/>
+                            <constraint firstItem="dNz-J1-CdG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="298" id="YS4-pj-iv1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dNz-J1-CdG" secondAttribute="trailing" constant="26" id="YoB-Wj-lpa"/>
+                            <constraint firstItem="TXb-VG-KZe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="202" id="eyY-bH-W8K"/>
+                            <constraint firstItem="zk3-uO-eBJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="298" id="sjs-FJ-4w0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zk3-uO-eBJ" secondAttribute="leading" id="w8j-GM-tL4"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zk3-uO-eBJ" secondAttribute="leading" id="xLU-2J-dk5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Pause" destination="dNz-J1-CdG" id="jE2-UI-ftG"/>
+                        <outlet property="Resert" destination="TXb-VG-KZe" id="5aQ-kn-Ifl"/>
+                        <outlet property="Start" destination="zk3-uO-eBJ" id="ljg-DV-ytt"/>
+                        <outlet property="TimeLable" destination="H6a-Wi-YTp" id="Krw-Jz-g1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+</document>
